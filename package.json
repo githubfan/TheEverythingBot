@@ -1,7 +1,7 @@
 {
-  "name": "master-bot",
-  "version": "1.0.0",
-  "description": "a discord music bot with guild , gifs and misc commands",
+  "name": "the-everything-bot",
+  "version": "0.1.0",
+  "description": "One great bot for discord",
   "main": "index.js",
   "engines": {
     "node": "12.x"
