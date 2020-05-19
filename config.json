@@ -1,5 +1,5 @@
 {
-  "prefix": "/",  
+  "prefix": "!",  
   "token": "", //bot token here
   "tenorAPI": "", //tenor api here
   "newsAPI": "", //news api here
