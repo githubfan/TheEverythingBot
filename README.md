@@ -110,3 +110,7 @@ to keep it running 24/7, but you can use anything from a spare RasPi to a VPS fo
 ### Licence
 
 The licence for this bot is a CC0 - you are free to use it without crediting me - but if you want to, feel free!
+
+### Upvote
+
+Upvote the bot [here](https://top.gg/bot/711956017319247942)
