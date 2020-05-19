@@ -1,0 +1,9 @@
+{
+  "prefix": "/",  
+  "token": "", //bot token here
+  "tenorAPI": "WFJPEHMB6T08", //tenor api here
+  "newsAPI": "7477f88ac8bb4744a8079f61fb62e27a", //news api here
+  "youtubeAPI": "AIzaSyBhlEn89o21Ko3sy02l9xMfagM9yZbIQws",  //youtube api here
+  "yandexAPI": "trnsl.1.1.20200519T112557Z.ee47136b37e0f574.c1f6f942789fbede069a1cf98eaa37f20e50adb4", //yandex apI here
+  "geniusLyricsAPI": "bIhT6NO90aHWV62rxyQ7__5aMEWYP3na4JYjD9Do8CRMx6Y74Ixcc8tvaGG7lIGP" //genius api here
+}
