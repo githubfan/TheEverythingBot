@@ -27,7 +27,7 @@ Structures.extend('Guild', function(Guild) {
 
 const client = new CommandoClient({
   commandPrefix: prefix,
-  owner: 'your-discord-user-id' // change this to your Discord user ID
+  owner: '589125712611639318' // change this to your Discord user ID
 });
 
 client.registry
@@ -47,8 +47,8 @@ client.registry
   .registerCommandsIn(path.join(__dirname, 'commands'));
 
 client.once('ready', () => {
-  console.log('Ready!');
-  client.user.setActivity(`${prefix}help`, {
+  console.log('The bot has reloaded and is now ready!');
+  client.user.setActivity(`${prefix}help `, {
     type: 'WATCHING',
     url: 'https://github.com/githubfan/TheEverythingBot'
   });

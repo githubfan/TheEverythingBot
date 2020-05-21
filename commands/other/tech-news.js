@@ -1,16 +1,16 @@
 const { MessageEmbed } = require('discord.js');
+const fetch = require('node-fetch');
 const { newsAPI } = require('../../config.json');
 const { Command } = require('discord.js-commando');
-const fetch = require('node-fetch');
 
-module.exports = class YnetNewsCommand extends Command {
+module.exports = class GlobalNewsCommand extends Command {
   constructor(client) {
     super(client, {
-      name: 'ynet-news',
-      aliases: ['israel-news', 'ynet'],
+      name: 'tech-news',
+      aliases: ['tech-news'],
       group: 'other',
-      memberName: 'ynet-news',
-      description: 'Replies with the 5 latest israeli news headlines',
+      memberName: 'tech-news',
+      description: 'Replies with the 5 latest Tech news headlines',
       throttling: {
         usages: 2,
         duration: 10
@@ -22,13 +22,13 @@ module.exports = class YnetNewsCommand extends Command {
     // powered by NewsAPI.org
     try {
       const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?sources=ynet&pageSize=5&apiKey=${newsAPI}`
+        `https://newsapi.org/v2/everything?q=technology&pageSize=5&apiKey=${newsAPI}`
       );
       const json = await response.json();
-      let articleArr = json.articles;
+      const articleArr = json.articles;
       let processArticle = article => {
-        let embed = new MessageEmbed()
-          .setColor('#BA160C')
+        const embed = new MessageEmbed()
+          .setColor('#FF4F00')
           .setTitle(article.title)
           .setURL(article.url)
           .setAuthor(article.author)
@@ -39,15 +39,15 @@ module.exports = class YnetNewsCommand extends Command {
         return embed;
       };
       async function processArray(array) {
-        for (let article of array) {
-          let msg = await processArticle(article);
+        for (const article of array) {
+          const msg = await processArticle(article);
           message.say(msg);
         }
       }
       await processArray(articleArr);
-    } catch (err) {
+    } catch (e) {
       message.say('Something failed along the way');
-      return console.error(err);
+      return console.error(e);
     }
   }
 };
