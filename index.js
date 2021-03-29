@@ -27,7 +27,7 @@ Structures.extend('Guild', function(Guild) {
 
 const client = new CommandoClient({
   commandPrefix: prefix,
-  owner: '589125712611639318' // change this to your Discord user ID
+  owner: '760353325568491630' // change this to your Discord user ID
 });
 
 client.registry
@@ -61,3 +61,4 @@ client.on('guildMemberAdd', member => {
 });
 
 client.login(token);
+.
